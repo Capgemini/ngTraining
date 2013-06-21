@@ -10,4 +10,14 @@ var indexRoute = {
   }
 };
 
-module.exports = [indexRoute];
+var addToCartRoute = {
+  method: 'POST',
+  path: '/addToCart',
+  config: {
+    handler: function(request) {
+      request.reply.redirect('/');
+    }
+  }
+};
+
+module.exports = [indexRoute, addToCartRoute];
