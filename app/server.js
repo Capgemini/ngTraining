@@ -19,5 +19,5 @@ server.addRoutes(routes);
 server.start(function() {
   var open = require('open');
   open('http://localhost:' + PORT + '/');
+  console.log('Hapi server running in port ' + PORT);
 });
-console.log('Hapi server running in port ' + PORT);
