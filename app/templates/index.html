@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shopper - Traditional</title>
+</head>
+<body>
+  <h1>Shopper - Trad</h1>
+  <p>This page demonstrates a traditional server side application<p>
+  <p>There are {{items.length}} items available</p>
+  <div class="items">
+  {{#each items}}
+    <h2>{{title}}</h2>
+    <p>Price: {{price}}</p>
+    <form class="item" action="addToCart" method="POST">
+      <input type="hidden" name="id" value="{{id}}">
+      <p>Add to cart</p>
+      <label for="amount-{{id}}">Amount</label><input type="text" id="amount-{{id}}" name="amount" value="1">
+      <input type="submit">
+    </form>
+  {{/each}}
+  </form>
+</body>
+</html>
