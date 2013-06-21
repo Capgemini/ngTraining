@@ -1,6 +1,6 @@
 var Hapi = require('hapi'),
     routes = require('./routes'),
-    PORT = 8080;
+    config = require('./config');
 
 var options = {
     views: {
@@ -14,10 +14,8 @@ var options = {
     }
 };
 
-var server = Hapi.createServer('0.0.0.0', PORT, options);
+var server = Hapi.createServer('0.0.0.0', config.PORT, options);
 server.addRoutes(routes);
 server.start(function() {
-  var open = require('open');
-  open('http://localhost:' + PORT + '/');
-  console.log('Hapi server running in port ' + PORT);
+  console.log('Hapi server running in port ' + config.PORT);
 });
