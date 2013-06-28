@@ -1,0 +1,7 @@
+{
+  "name": "Introduction to Web Applications",
+  "version": "0.0.1",
+  "dependencies": {
+    "reveal.js": "~2.4.0"
+  }
+}

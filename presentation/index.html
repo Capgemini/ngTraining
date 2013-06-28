@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Introduction to Web Applications</title>
+    <link rel="stylesheet" href="components/reveal.js/css/reveal.min.css">
+    <link rel="stylesheet" href="components/reveal.js/css/theme/moon.css" id="theme">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="components/reveal.js/lib/css/zenburn.css">
+
+    <!--[if lt IE 9]>
+    <script src="components/reveal.js/lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+<body>
+  <div class="reveal">
+      <div class="slides">
+          <section>
+            <h1>Introduction to Web Applications</h1>
+          </section>
+          <section>
+            <h2>The Internet</h2>
+              <ul>
+                <li>Web Servers</li>
+                <li>Browsers</li>
+                <li>HTTP <small>(Hyper-Text Transfer Protocol)</small></li>
+              </ul>
+            </h1>
+          </section>
+          <section>
+            <h2>What gets sent?</h2>
+            <ul>
+              <li>Content
+                <ul>
+                  <li>Markup <small>(HTML)</small></li>
+                  <li>Images <small>(jpg, png, gif)</small></li>
+                  <li>Stylesheets <small>(CSS)</small></li>
+                  <li>Behaviour <small>(JavaScript)</small></li>
+                </ul>
+              </li>
+              <li>Data
+                <ul>
+                  <li>JSON <small>(JavaScript Object Notation - {})</small></li>
+                  <li>XML <small>(eXtensible Markup Language - &lt;&gt;)</small></li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>Traditional Web Apps</h2>
+            <p>Server-side applications - dumb browser</p>
+            <ul>
+              <li>Server generates each page</li>
+              <li>Request and Response <small>(stateless)</small></li>
+            </ul>
+          </section>
+          <section>
+            <h1>Shopping Cart Demo <small>(Traditional)</small></h1>
+            <p>On each click the browser must:</p>
+            <ul>
+              <li>send a request to the server</li>
+              <li>rebuild the page from the response</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Rich Internet Applications <small>(RIA)</small></h2>
+            <p>Client-side applications - smart browser</p>
+            <ul>
+              <li>Application logic is in the browser</li>
+              <li>Server is dumb(ish) - only providing:
+                <ul>
+                  <li>Application content and code</li>
+                  <li>Data Interface <small>(RESTful API)</small></li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>Single Page Applications <small>(SPA)</small></h2>
+            <ul>
+              <li>Client-side application running from a single web page</li>
+              <li>Application Logic runs in Browser <small>(JavaScript/AngularJS)</small></li>
+            </ul>
+          </section>
+          <section>
+            <h1>Shopping Cart Demo <small>(SPA)</small></h1>
+            <ul>
+              <li>Once loaded there are no page refreshes</li>
+              <li>The browser communicates with server data API</li>
+            </ul>
+          </section>
+      </div>
+  </div>  
+
+  <script src="components/reveal.js/lib/js/head.min.js"></script>
+  <script src="components/reveal.js/js/reveal.min.js"></script>
+  <script type="text/javascript">
+    Reveal.initialize({
+      history: true
+    });
+  </script>
+</body>
+</html>
