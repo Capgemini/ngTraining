@@ -9,6 +9,18 @@ var indexRoute = {
     }
   }
 };
+
+var staticContentRoute = {
+	method: 'GET',
+	path: '/{path*}',
+	config: {
+		handler: {
+			directory: { path: './app', listing: false, index: false }
+		}
+	}
+};
+
+
 var cartItems = [];
 var currentItem = {};
 var inCart = false;
@@ -60,4 +72,4 @@ var addToCartRoute = {
   }
 };
 
-module.exports = [indexRoute, addToCartRoute];
+module.exports = [indexRoute, staticContentRoute, addToCartRoute];

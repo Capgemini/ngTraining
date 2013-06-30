@@ -1,43 +1,72 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Shopper - Traditional</title>
+	<meta charset="UTF-8">
+	<title>Shopper - Traditional</title>
+	<link rel="stylesheet" href="styles/css/app.css"/>
+	<link rel="stylesheet" href="styles/css/main.css"/>
 </head>
 <body>
-  <h1>Shopper - Trad</h1>
-  <p>This page demonstrates a traditional server side application<p>
-  <div>
-      <p>Your shopping cart has: {{ cartItems.length }}</p>
-      <div class="cartItems">
-          <p>Items added:</p>
-          <ul>
-              {{#each cartItems}}
-              <li>
-                  <h4>{{ title }}</h4>
-                  <h6>{{ price }}</h6>
-                  <p>Amount: {{ amount }}</p>
-                  <p>Total cost: {{ totalCost }}</p>
-              </li>
-              {{/each}}
-          </ul>
-      </div>
 
+	<div class="row">
+		<header>
+			<h3>Shopper - Traditional</h3>
+			<p>This page demonstrates a traditional server side application<p>
+		</header>
 
-  </div>
-  <p>There are {{items.length}} items available</p>
-  <div class="items">
-  {{#each items}}
-    <h2>{{title}}</h2>
-    <p>Price: {{price}}</p>
-    <form class="item" action="addToCart" method="POST">
-      <input type="hidden" name="id" value="{{id}}">
-      <p>Add to cart</p>
-      <label for="amount-{{id}}">Amount</label>
-      <input type="number" id="amount-{{id}}" name="amount" value="1" min="0">
-      <input type="submit">
-    </form>
-  {{/each}}
-  </form>
+		<div class="row">
+
+			<div class="items large-8 columns">
+				<h6 class="">There are {{items.length}} items available</h6>
+				<ul class="items-list">
+					{{#each items}}
+					<li class="row item">
+						<div class="small-8 columns">
+							<img class="th left" src="{{ img }}" alt=""/>
+							<div class="item-info">
+								<h4>{{title}}</h4>
+								<p>Price: {{price}}</p>
+							</div>
+						</div>
+						<div class="small-4 columns">
+							<form action="addToCart" method="POST">
+								<input type="hidden" name="id" value="{{id}}">
+								<fieldset>
+									<label for="amount-{{id}}">Amount:</label>
+									<input class="amount" type="number" id="amount-{{id}}" name="amount" value="1" min="0">
+								</fieldset>
+								<input class="button" type="submit" value="Add to Cart">
+							</form>
+						</div>
+					</li>
+					{{/each}}
+				</ul>
+			</div>
+
+			<div class="cart large-4 columns">
+				{{#if cartItems.length}}
+				<h5 class="cart-length">Your shopping cart has: {{ cartItems.length }} items</h5>
+				{{else}}
+				<h5 class="cart-length">Your shopping cart has: 0 items</h5>
+				{{/if}}
+				<div class="cartItems">
+					<ul class="no-bullet">
+						{{#each cartItems}}
+						<li>
+							<h5>{{ title }}</h5>
+							<ul class="no-bullet inline-list">
+								<li>Price: {{ price }}</li>
+								<li>Amount: {{ amount }}</li>
+								<li>Cost: {{ totalCost }}</li>
+							</ul>
+							<hr>
+						</li>
+						{{/each}}
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</div>
 </body>
 </html>
