@@ -1,6 +1,9 @@
 {
   "name": "spa",
   "version": "0.0.0",
+  "dependencies": {
+    "angular-unstable": "~1.1.5"
+  },
   "ignore": [
     "**/.*",
     "node_modules",
