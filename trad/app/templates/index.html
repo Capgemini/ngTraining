@@ -17,9 +17,9 @@
 		<div class="row">
 
 			<div class="items large-8 columns">
-				<h6 class="">There are {{items.length}} items available</h6>
+				<h6 class="">There are {{products.length}} items available</h6>
 				<ul class="items-list">
-					{{#each items}}
+					{{#each products}}
 					<li class="row item">
 						<div class="small-8 columns">
 							<img class="th left" src="{{ img }}" alt=""/>
@@ -44,18 +44,18 @@
 			</div>
 
 			<div class="cart large-4 columns">
-				{{#if cartItems.length}}
-				<h5 class="cart-length">Your shopping cart has: {{ cartItems.length }} items</h5>
+				{{#if cart.items.length}}
+				<h5 class="cart-length">Your shopping cart has: {{ cart.items.length }} items</h5>
 				{{else}}
 				<h5 class="cart-length">Your shopping cart has: 0 items</h5>
 				{{/if}}
-				<div class="cartItems">
+				<div class="cart.items">
 					<ul class="no-bullet">
-						{{#each cartItems}}
+						{{#each cart.items}}
 						<li>
-							<h5>{{ title }}</h5>
+							<h5>{{ product.title }}</h5>
 							<ul class="no-bullet inline-list">
-								<li>Price: {{ price }}</li>
+								<li>Price: {{product.price}} </li>
 								<li>Amount: {{ amount }}</li>
 								<li>Cost: {{ totalCost }}</li>
 							</ul>
