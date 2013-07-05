@@ -4,3 +4,4 @@ node_modules/
 .sass-cache/
 components
 *.sublime-*
+atlassian-ide-plugin.xml

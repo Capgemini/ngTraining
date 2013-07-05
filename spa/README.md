@@ -6,6 +6,7 @@ You need to install some node modules:
 
 ```
 npm install
+bower install
 ```
 
 ## Running
