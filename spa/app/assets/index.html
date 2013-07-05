@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Shopper - SPA</title>
+	<link rel="stylesheet" href="styles/css/app.css"/>
+	<link rel="stylesheet" href="styles/css/main.css"/>
+	<style type="text/css">
+		/*
+		 The animate-enter CSS class is the event name that you
+		 have provided within the ngAnimate attribute.
+		*/
+		.animate-enter {
+		 -webkit-transition: 1s linear all; /* Safari/Chrome */
+		 -moz-transition: 1s linear all; /* Firefox */
+		 -o-transition: 1s linear all; /* Opera */
+		 transition: 1s linear all; /* IE10+ and Future Browsers */
+		 
+		 /* The animation preparation code */
+		 opacity: 0;
+		}
+		 
+		/*
+		 Keep in mind that you want to combine both CSS
+		 classes together to avoid any CSS-specificity
+		 conflicts
+		*/
+		.animate-enter.animate-enter-active {
+		 /* The animation code itself */
+		 opacity: 1;
+		}
+		
+	</style>
+</head>
+<body ng-app="spa" ng-controller="MainCtrl">
+	<h1>{{pete}}</h1>
+	<div class="row">
+		<header>
+			<h3>Shopper - SPA</h3>
+			<p>This page demonstrates a single page application<p>
+		</header>
+
+		<div class="row">
+
+			<div class="items large-8 columns">
+				<h6 class="">There are {{products.length}} items available</h6>
+				<ul class="items-list no-bullet">
+		
+					<li class="row item" ng-repeat="product in products">
+						<div class="small-8 columns">
+							<img class="th left" ng-src="{{ product.img }}" alt=""/>
+							<div class="item-info">
+								<h4>{{product.title}}</h4>
+								<p>Price: {{product.price}}</p>
+							</div>
+						</div>
+						<div class="small-4 columns">
+							<form ng-controller="FormCtrl">
+								<input type="hidden" name="id" value="{{id}}">
+								<fieldset>
+									<label for="amount-{{product.id}}">Amount:</label>
+									{{amount}}
+									<input class="amount" type="number" id="amount-{{product.id}}" name="amount" min="0" ng-model="amount">
+								</fieldset>
+								<input class="button" type="submit" value="Add to Cart" ng-click="addToCart(product, amount)">
+							</form>
+						</div>
+					</li>
+
+				</ul>
+			</div>
+
+			<div class="cart large-4 columns">
+
+				<h5 class="cart-length">Your shopping cart</h5>
+				
+				<div class="cart.items" ng-if="cart.items.length > 0">
+					<ul class="no-bullet">
+						
+						<li ng-repeat="item in cart.items track by item.product.id" ng-animate="{enter: 'animate-enter'}">
+							<h5>{{ item.product.title }}</h5>
+							<ul class="no-bullet inline-list">
+								<li>Price: {{item.product.price}} </li>
+								<li>Amount: {{ item.amount }}</li>
+								<li>Cost: {{ item.amount * item.product.price | currency:'£'}}</li>
+							</ul>
+							<hr>
+						</li>
+					</ul>
+				</div>
+				<p ng-pluralize count="cart.items.length || 0" when="{ '0': 'no items', 'one': 'one item', 'other':'{} items'}"></p>
+			</div>
+
+		</div>
+	</div>
+
+	<script type="text/javascript" src="/components/angular-unstable/angular.js"></script>
+	<script type="text/javascript" src="/js/app.js"></script>
+</body>
+</html>

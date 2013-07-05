@@ -1,0 +1,83 @@
+@import "compass/utilities/general/clearfix";
+
+$img-width: 128px;
+$lighter: #E6F3FF;
+$light: #B5D5E8;
+$medium: #94E4FF;
+$dark: #0D2882;
+$darker: #DEFEFF;
+
+html {
+  height: 100%;
+}
+body  {
+  height: 100%;
+  background: $light;
+  header {
+    font-familyt: Helvetica Neue, Helvetica, Helvetica, Arial, sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 50px;
+  }
+
+  .row {
+    max-width: 75em;
+  }
+  .items {
+    .items-list {
+      .item {
+        background: $lighter;
+        padding: 10px;
+        margin: 15px 0;
+        img {
+          margin-right: 20px;
+          height: 128px;
+          width: $img-width;
+        }
+        .item-info {
+          position: absolute;
+          top: 0px;
+          left: $img-width + 30px;
+
+          h4, p {
+            margin: 0;
+          }
+        }
+        form {
+          fieldset {
+            @include clearfix();
+            margin: 0;
+            padding: 0;
+            border: 0;
+            label {
+              font-size: 1.2em;
+              font-weight: bold;;
+              display: inline;
+            }
+            .amount {
+              display: inline;
+              width: 75px;
+              float: right;
+            }
+          }
+          .button {
+            width: 100%;
+          }
+
+        }
+      }
+    }
+  }
+  .cart {
+    background: $lighter;
+    .cart-length {
+      padding: 15px;
+      text-align: center;
+      border-bottom: 1px solid;
+      margin-bottom: 25px;
+    }
+
+  }
+
+}
+
