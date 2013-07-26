@@ -33,37 +33,46 @@
               <p>Internet Explorer, Firefox, Chrome, Safari, Opera, etc.</p>
               <img src="browsers.jpg">
             </section>
+          </section>
+          <section>
             <section>
               <h2>HTTP <small>(Hyper-Text Transfer Protocol)</small></h2>
-              <p>The language that clients and servers use to communicate</p>
+              <p>The language of the Web<p>
               <img src="HTTP.png">
+              <p>Clients and Servers communicate using HTTP packets</p>
             </section>
           </section>
           <section>
-            <h2>What gets sent?</h2>
-            <ul>
-              <li>Content
+            <section>
+              <h2>Content and Data</h2>
+              <p>The server provides content and data for the client to display</p>
+              <p>The client sends data back to the server</p>
+            </section>
+            <section>
+                <h2>Content</h2>
                 <ul>
                   <li>Markup <small>(HTML)</small></li>
                   <li>Images <small>(jpg, png, gif)</small></li>
                   <li>Stylesheets <small>(CSS)</small></li>
                   <li>Behaviour <small>(JavaScript)</small></li>
                 </ul>
-              </li>
-              <li>Data
+            </section>
+            <section>
+                <h2>Data</h2>
                 <ul>
-                  <li>JSON <small>(JavaScript Object Notation - {})</small></li>
-                  <li>XML <small>(eXtensible Markup Language - &lt;&gt;)</small></li>
+                  <li>JSON <small>(JavaScript Object Notation)</small> : <b>{...}</b></li>
+                  <li>XML <small>(eXtensible Markup Language)</small> : <b>&lt;...&gt;</b></li>
                 </ul>
-              </li>
-            </ul>
+              </ul>
+            </section>
           </section>
           <section>
             <h2>Traditional Web Apps</h2>
-            <p>Server-side applications - dumb browser</p>
+            <p>Server-side application - dumb browser</p>
             <ul>
               <li>Server generates each page</li>
               <li>Request and Response <small>(stateless)</small></li>
+              <li>Server does all the processing</li>
             </ul>
           </section>
           <section>
@@ -75,14 +84,14 @@
             </ul>
           </section>
           <section>
-            <h2>Rich Internet Applications <small>(RIA)</small></h2>
-            <p>Client-side applications - smart browser</p>
+            <h2>Client-side Code</h2>
+            <img src="java.png">
             <ul>
-              <li>Application logic is in the browser</li>
-              <li>Server is dumb(ish) - only providing:
+              <li>More application logic in the browser</li>
+              <li>A better user experience:
                 <ul>
-                  <li>Application content and code</li>
-                  <li>Data Interface <small>(RESTful API)</small></li>
+                  <li>no waiting for request-response-reload</li>
+                  <li>more usable widgets, such as date-pickers</li>
                 </ul>
               </li>
             </ul>
@@ -90,8 +99,14 @@
           <section>
             <h2>Single Page Applications <small>(SPA)</small></h2>
             <ul>
-              <li>Client-side application running from a single web page</li>
+              <li>Whole application runs from a single web page</li>
               <li>Application Logic runs in Browser <small>(JavaScript/AngularJS)</small></li>
+              <li>Server is dumb(ish) - only providing:
+                <ul>
+                  <li>Application content and code</li>
+                  <li>Data Interface <small>(RESTful API)</small></li>
+                </ul>
+              </li>
             </ul>
           </section>
           <section>
