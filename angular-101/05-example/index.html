@@ -6,12 +6,13 @@
       <input type="date" ng-model="myDate"/>
       {{ myDate | date:'EEEE, MMMM d,y' }}  
     </div>
+
     <div>
-      <p>This text will always be in upper case</p>
       <label>Insert text: </label>
       <input type="text" ng-model="myText"/>
-      {{ myText | uppercase }}  
+      <p>This text will always be in upper case: {{ myText | uppercase }}</p>
     </div>
-     <script src="http://code.angularjs.org/1.2.0-rc.2/angular.min.js"></script>
+
+    <script src="http://code.angularjs.org/1.2.0-rc.2/angular.min.js"></script>
   </body>
 </html>

@@ -1,11 +1,13 @@
 <!doctype html>
 <html ng-app>
   <body>
-    <input ng-model="numerator"> 
-    <span> / </span> 
-    <input ng-model="denominator"> 
-    <span> = </span>  
-    {{ numerator / denominator * 100 | number : 2 }}
+    <label>Numerator:</label>
+    <input ng-model="numerator" type="number">
+    <label>Denominator:</label>
+    <input ng-model="denominator" type="number"> 
+
+    <p>{{numerator}} / {{denominator}} = {{ }}</p>
+
     <script src="http://code.angularjs.org/1.2.0-rc.2/angular.min.js"></script>
   </body>
 </html>

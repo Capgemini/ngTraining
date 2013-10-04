@@ -1,11 +1,17 @@
 <!doctype html>
 <html ng-app>
   <body>
-     <label>Your name:</label>
-     <input type="text" ng-model="name"/>
-     <label>Your place of birth: </label>
-     <input type="text" ng-model="place"/>
-     <p>{{name + ' comes from ' + place}}</p>
-     <script src="http://code.angularjs.org/1.2.0-rc.2/angular.min.js"></script>
+    <table>
+        <tr><th>Day of the Week</th><th>Distance Walked (miles)</th></tr>
+        <tr><td>Monday</td><td><input type="number" ng-model="monday"></td></tr>
+        <tr><td>Tuesday</td><td><input type="number" ng-model="tuesday"></td></tr>
+        <tr><td>Wednesday</td><td><input type="number" ng-model="wednesday"></td></tr>
+        <tr><td>Thursday</td><td><input type="number" ng-model="thursday"></td></tr>
+        <tr><td>Friday</td><td><input type="number" ng-model="friday"></td></tr>
+    </table>
+    <p>Total distance walked: {{ monday + tuesday + wednesday + thursday + friday }} miles</p>
+    <p>Average distance walked each day: {{ (monday + tuesday + wednesday + thursday + friday) / 5 }} miles</p>
+
+    <script src="http://code.angularjs.org/1.2.0-rc.2/angular.min.js"></script>
   </body>
 </html>
