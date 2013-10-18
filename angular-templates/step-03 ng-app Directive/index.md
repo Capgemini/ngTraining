@@ -1,5 +1,7 @@
 # The `ng-app` Directive
 
+##Overview
+
 This directive defines your application.  You place it as an attribute on an HTML element.  This
 tells AngularJS that this element and all of its children are part of an AngularJS application.
 **There can only be one `ng-app` per page**. We usually place it near the root of the page, for
@@ -12,7 +14,7 @@ or
 <body ng-app>
 ```
 
-###Example - Our First AngularJS Application
+##Example
 
 In this example we create our first simple AngularJS application.
 
@@ -29,7 +31,7 @@ In this example we create our first simple AngularJS application.
 ```
 Here is a [link to the example](example-01).
 
-### What have we done?
+## Explanation
 * Loaded the `angular.js` file using the `<script>` tag at the bottom of the `<body>` tag.
 * Applied the `ng-app` directive to the `<html>` tag so that the entire page is an AngularJS
   application.

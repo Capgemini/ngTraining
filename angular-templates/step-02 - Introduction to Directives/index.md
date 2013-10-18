@@ -1,6 +1,7 @@
-#Getting Started
+#Introduction to Directives
 
 ##Declarative HTML
+
 HTML is excellent at describing content for static documents in a declarative fashion.
 For example if you wish to display an image of a map then you simply provide an `<img>` tag giving
 it a `src` attribute telling the browser from where to get the image of the map:
@@ -22,6 +23,8 @@ user.
 
 > What is needed is a way to teach the browser new HTML syntax.
 
+## AngularJS Directives
+
 **AngularJS** allows you to achieve functionality like this by using **directives** and
 **data-binding**. It uses HTML as a template language, but lets us extend HTML's syntax to express
 our application's visual components. In the case of maps, a developer could create am AngularJS
@@ -36,22 +39,6 @@ The HTML designer doesn't need to understand how the `<map>` directive works in 
 Moreover the idea of a `<map>` tag fits in the world view of anyone who is used to working with
 HTML. This is the power that AngularJS brings to building web applications.
 
-# Loading AngularJS
-Before we can use AngularJS to create an application we need to load it into the browser.  We do
-this using a `<script>` element:
-
-```html
-<script src="angular.js"></script>
-```
-
-This element tells the browser to download and run the `angular.js` JavaScript file.
-
->You can get the `angular.js` file from http://code.angularjs.org/.
-
-We place this `<script>` tag in the `<head>` tag or at the bottom of the `<body>` tag. Once the
-script is loaded we are ready to make our app.  We do this by adding directives to the HTML.
-
-#Directives
 AngularJS can add functionality to the browser by defining Directives that map to HTML elements,
 attributes, classes and even comments. It has a set of directives built-in, which are useful for
 building web applications. In addition we can define our own directives so that our HTML describes
