@@ -10,7 +10,7 @@
     "hapi": "~1.8.1",
     "handlebars": "~1.0.12",
     "supervisor": "~0.5.3",
-    "open": "0.0.3"
+    "open": "6.0.0"
   },
   "devDependencies": {},
   "scripts": {
