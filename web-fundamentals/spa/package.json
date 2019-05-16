@@ -9,8 +9,8 @@
   "dependencies": {
     "hapi": "~1.8.1",
     "supervisor": "~0.5.3",
-    "open": "0.0.3",
-    "bower": "0.10.0"
+    "open": "6.0.0",
+    "bower": "1.3.10"
   },
   "devDependencies": {},
   "scripts": {
